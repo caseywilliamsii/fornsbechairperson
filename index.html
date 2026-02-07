@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Williams for NSBE National Chairperson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Navigation-->
+    <header>
+        <div class="header-inner">
+            <div class="header-title">
+                <div class="brand">
+                    <img class="brand-logo" src="Attachments/nsbelogo.png" alt="NSBE Logo">
+                    <div class="brand-text">
+                        <h1>Casey Williams II</h1>
+                        <p>Candidate for 2026-2027 NSBE National Chairperson</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <a href="#about">About</a>
+                <a href="#platform">Platform</a>
+                <a href="#socials">Socials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Platform Header -->
+        <div class="header-hero">
+            <h2 class="hero-title">Access. Connection. Elevation.</h2>
+            <p class="hero-subtitle">
+                Leadership that listens and builds sustainable direction so that we ACE the future of NSBE.
+            </p>
+        </div>
+    </header>
+
+    <!--About Me and Focus-->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-grid">
+            <div class="about-photo">
+                <img src="Attachments/Headshot.JPG" alt="Headshot of Casey Williams">
+            </div>
+
+            <div class="about-text">
+                <p>NSBE Family,<br><br>
+
+                    For 51 years, our Society has existed because students dared to build something greater than
+                    themselves. The Chicago Six formed NSBE so that Black engineers could access opportunity,
+                    connection, and community at a time when none of those things were guaranteed.<br><br>
+
+                    Today, as our organization approaches a new chapter, we face a familiar challenge:<br>
+                    <strong>Are we prepared to serve the students of today and the generations to come?</strong><br><br>
+
+                    The ACE Platform is a blueprint for a NSBE that is stronger, more
+                    aligned, more modern, and more member-centered.<br><br>
+
+                    ACE modernizes our systems.<br>
+                    ACE unites our chapters and our leaders.<br>
+                    ACE elevates our members and our mission.<br><br>
+
+                    Together, we will ACE the next chapter of NSBE’s history.
+                </p>
+
+                <div class="pill-row">
+                    <span class="pill">Membership Driven</span>
+                    <span class="pill">Sustainable Impact</span>
+                    <span class="pill">Accountability & Trust</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section id="platform">
+        <h2>My Platform: A.C.E.</h2>
+        <ul class="platform-list">
+            <li><strong>Access:</strong> Ensuring every member and partner can fully engage with NSBE.<br>
+                <p>Access is foundational to equity and empowerment. NSBE must provide consistent systems and support so
+                    chapters, leaders, and members can focus on impact rather than navigation.</p>
+            </li>
+            <li><strong>Connection:</strong> Aligning NSBE to move together.<br>
+                <p>NSBE functions best when leadership, timelines, and priorities are clearly aligned. Connection
+                    strengthens trust, execution, and continuity across the Society.</p>
+            </li>
+            <li><strong>Elevation:</strong> Developing leaders, influence, and long-term sustainability.<br>
+                <p>Elevation ensures NSBE’s mission endures beyond any single term. We must intentionally develop
+                    leaders, strengthen advocacy, and plan for the future—and start early.</p>
+            </li>
+        </ul>
+        <br>
+        <a class="social-card" href="Attachments/LAP.pdf" target="_blank" rel="noopener">
+            <div class="social-label">Leadership Action Plan</div>
+            <div class="social-value">View Full Leadership Action Plan Here</div>
+        </a>
+    </section>
+
+    <!-- Socials & Resume -->
+    <section id="socials">
+        <h2>Socials & Resume</h2>
+        <p class="section-subtitle">Follow along and stay connected.</p>
+
+        <div class="social-grid">
+            <a class="social-card" href="https://instagram.com/" target="_blank" rel="noopener">
+                <div class="social-label">Instagram</div>
+                <div class="social-value">@myhandle</div>
+            </a>
+
+            <a class="social-card" href="https://www.linkedin.com/in/caseywilliamsii/" target="_blank" rel="noopener">
+                <div class="social-label">LinkedIn</div>
+                <div class="social-value">Casey Williams II</div>
+            </a>
+
+            <a class="social-card" href="Attachments/Resume.pdf" target="_blank" rel="noopener">
+                <div class="social-label">Resume</div>
+                <div class="social-value">View PDF</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Me Form; Uses EmailJS -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p class="section-subtitle">Feel free to reach out with any questions!</p>
+        <div class="contact-form">
+            <form id="contact-form">
+                <input type="text" name="user_name" placeholder="Your Name" required>
+                <input type="email" name="user_email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="status"></p>
+        </div>
+    </section>
+
+    <!-- Copyright Footer -->
+    <footer>
+        <p>&copy; 2026 Casey Williams. All Rights Reserved.</p>
+    </footer>
+
+    <!-- EmailJS Integration; Source: ChatGPT -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("Z8vMYmV5cCGZbMqL5"); //Public key
+        })();
+
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('status');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_caseyforchair', 'template_caseyforchair', this) //service & template IDs
+                .then(() => {
+                    status.textContent = "Message sent successfully!";
+                    form.reset();
+                }, (err) => {
+                    status.textContent = "Oops! Something went wrong. Please try again.";
+                    console.error('EmailJS error:', err);
+                });
+        });
+    </script>
+</body>
+
+</html>
