@@ -391,7 +391,7 @@ footer {
     .about-photo img {
         height: auto;
         object-fit: contain;
-        max-height: 420px;
         background: #fff;
     }
 }
+
