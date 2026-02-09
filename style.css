@@ -180,6 +180,50 @@ header nav a:hover {
     background: rgba(255, 255, 255, 0.10);
 }
 
+/* Countdown */
+#countdown {
+  text-align: center;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.time-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 10px;
+  box-shadow: var(--shadow);
+}
+
+.time-box span {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.time-box label {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Sections */
 section {
     padding: 44px 18px;
@@ -194,7 +238,7 @@ h2 {
     letter-spacing: -0.3px;
 }
 
-/* ABOUT SECTION ALIGNMENT FIXES */
+/* ABOUT SECTION */
 #about h2 {
     margin-bottom: 18px;
 }
@@ -253,6 +297,11 @@ h2 {
 }
 
 /* Platform */
+
+#platform h2 {
+  margin-top: 0px;
+}
+
 .platform-list {
     list-style: none;
     padding: 0;
@@ -394,4 +443,3 @@ footer {
         background: #fff;
     }
 }
-
