@@ -42,7 +42,6 @@
 
     <section id="countdown">
         <h2>Countdown to #NSBE2026</h2>
-        <!-- <p class="section-subtitle">The next chapter of NSBE begins soon.</p> -->
 
         <div class="countdown-grid">
             <div class="time-box">
@@ -213,7 +212,7 @@
 
         <!-- Countdown Timer; Source: ChatGPT -->
         <script>
-            const targetDate = new Date("2026-03-18T09:00:00").getTime();
+            const targetDate = new Date("2026-03-18T00:00:00").getTime();
 
             const countdown = setInterval(() => {
                 const now = new Date().getTime();
@@ -222,7 +221,7 @@
                 if (distance < 0) {
                     clearInterval(countdown);
                     document.getElementById("countdown").innerHTML =
-                        "<h2>It's Time.</h2><p>The future of NSBE is here.</p>";
+                        "<h2>It's Time.</h2><p>Let's ACE the future of NSBE together!</p>";
                     return;
                 }
 
@@ -266,3 +265,4 @@
 
 
 </html>
+
