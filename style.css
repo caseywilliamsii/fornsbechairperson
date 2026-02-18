@@ -223,6 +223,22 @@ header nav a:hover {
   }
 }
 
+/* Campaign Video */
+#campaign-video {
+  text-align: center;
+}
+
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
 /* Sections */
 section {
     padding: 44px 18px;
